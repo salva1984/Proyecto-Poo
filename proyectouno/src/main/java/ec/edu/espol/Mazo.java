@@ -14,7 +14,7 @@ public class Mazo {
 
     public Mazo(){
         cartas = new ArrayList<>();
-        for(int i = 1; i < 11; i++){
+        for(int i = 1; i < 10; i++){
             cartas.add(new CartaNormal(Color.A, i));
             cartas.add(new CartaNormal(Color.R, i));
             cartas.add(new CartaNormal(Color.V, i));

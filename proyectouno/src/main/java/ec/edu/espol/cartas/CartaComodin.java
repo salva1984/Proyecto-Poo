@@ -2,6 +2,7 @@ package ec.edu.espol.cartas;
 
 public class CartaComodin extends Carta {
     private TipoComodin tipo;
+    
     public CartaComodin(Color color,TipoComodin tipo){
         super(color);
         this.tipo = tipo;

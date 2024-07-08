@@ -1,6 +1,7 @@
 package ec.edu.espol;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import ec.edu.espol.cartas.Carta;
 import ec.edu.espol.cartas.CartaComodin;
@@ -50,6 +51,7 @@ public class Juego {
     }
 
     public static Carta robarCarta(ArrayList<Carta> mazo){
+        Collections.shuffle(mazo);
         Carta c = mazo.get(0);
         mazo.remove(0);
         return c;

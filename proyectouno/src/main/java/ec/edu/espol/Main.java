@@ -23,12 +23,14 @@ public class Main {
 
         // robamos una carta
         Carta uc = Juego.robarCarta(m.getCartas());
+
         boolean condicion = (!jm.getCartas().isEmpty()) && (!jh.getCartas().isEmpty());
-        // Turno del jugador
+        //Juego principal
         while (condicion) {
             if (condicion) {
                 boolean turno = true;
                 Scanner sc = new Scanner(System.in);
+                
                 while (turno) {
                     System.out.println("--------------------");
                     System.out.println("Cartas del rival: ");
@@ -174,6 +176,8 @@ public class Main {
                             System.out.println("Ingrese un indice valido!");
                             System.out.println("--------------------");
                         }
+                        if (jh.getCartas().isEmpty())
+                            condicion = false;
                     }
                     if (jh.getCartas().size() == 1) {
                         System.out.println("--------------------");
@@ -182,8 +186,7 @@ public class Main {
                     }
 
                 }
-                if (jh.getCartas().isEmpty())
-                    condicion = false;
+
                 // TURNO DE LA MAQUINA
                 boolean turnoMaquina = true;
                 // Tenemos que usar iterator para eliminar cartas mientras las estamos usando o
