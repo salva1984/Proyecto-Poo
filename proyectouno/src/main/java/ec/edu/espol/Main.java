@@ -51,6 +51,8 @@ public class Main {
                         System.out.println("--------------------");
                         System.out.println(
                                 "No tienes ninguna carta valida para jugar, robando una carta y pasando turno");
+                        System.out.println("Ingresa cualquier caracter y presiona enter para continuar: ");
+                        sc.next();
                         System.out.println("--------------------");
                         jh.getCartas().add(Juego.robarCarta(m.getCartas()));
                         turno = false;
